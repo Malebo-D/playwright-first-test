@@ -1,10 +1,8 @@
 import { Page, Locator } from "@playwright/test";
-
 export class PlayPenLogin{
     EmailInput : Locator;
     PasswordIput: Locator;
     SignInButton: Locator;
-
     constructor (private page : Page){
 
         this.EmailInput = this.page.locator('#email');
@@ -18,7 +16,6 @@ export class PlayPenLogin{
         await this.SignInButton.click();
 
     }
-
     async goto(){
         await this.page.goto('https://happy-playpen.lovable.app/login');
     }
